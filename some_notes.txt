@@ -1,0 +1,8 @@
+To compile this container run
+docker build -t test-docker .
+
+To run this container on specific port run this
+docker run -it -p 8080:8080 test-docker
+
+To query first data and make sure data runs and gets uploaded properly run this
+curl -X POST -F "file=@./test.jpg" localhost:8080/api/endpoint
